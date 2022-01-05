@@ -23,7 +23,7 @@ const logError = (error) => {
 
 const uniqueFileName = (counter) => {
   const paddedCounter = counter.toString().padStart(5, '0');
-  const dateString = (new Date()).toISOString().split('.')[0].replace('T', '_');
+  const dateString = (new Date()).toISOString().split('.')[0].replace('T', '_').replace(/:/g, '-');
   return `${paddedCounter}_${dateString}.json`;
 }
 
