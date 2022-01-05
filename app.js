@@ -21,9 +21,13 @@ app.get('/', (req, res) => {
 
 app.post('/webhooks', async (req, res) => {
   const body = req.body;
+  const data = {
+    headers: req.headers,
+    body: body
+  };
   const fileName = uniqueFileName(counter++);
   try {
-    await saveToFile(fileName, body);
+    await saveToFile(fileName, data);
     return res.json({
       status: 'success',
       fileName: fileName
