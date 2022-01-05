@@ -1,8 +1,11 @@
 const express = require('express');
+const morgan = require('morgan');
 const app = express();
 const { saveToFile, logError, uniqueFileName } = require('./util');
 
 let counter = 0;
+
+app.use(morgan('dev'));
 
 app.use(express.json());
 app.use((err, req, res, next) => {
