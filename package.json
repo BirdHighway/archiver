@@ -1,0 +1,14 @@
+{
+  "name": "archiver",
+  "version": "1.0.0",
+  "description": "Save incoming body to disk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
